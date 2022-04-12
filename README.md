@@ -19,6 +19,7 @@ Download [neste link](https://download.altera.com/akdlm/software/acdsinst/13.1/1
 ### Biblioteca para rodar o Quartus II 13.1:
 
     $ sudo add-apt-repository ppa:linuxuprising/libpng12
+    $ sudo apt update
     $ sudo apt install libpng12-0
 
 ## Instalação do Quartus
@@ -34,3 +35,15 @@ O processo de instalação deve ocorrer normalmente.
 <!--- Texto --->
 
     $ <install_path>/quartus/bin/quartus --64bit
+
+## Configurações Adicionais
+
+O Quartus II criou um projeto e compilou códigos em VHDL. Porém durante uso de simulações com o University Program VWF ocorreu um erro:
+
+    "ModelSim executable not found"
+
+Para resolver esse problema vá em:
+
+    Tools &rarr; Options &rarr; EDA Tool Options
+
+Apenas um local estará com link. E é o local errado. Recorte e cole o link no campo **ModelSim**.
