@@ -44,7 +44,7 @@ Ao utilizar o Quartus II foi possível criar um projeto e compilar códigos em V
 
 Para resolver esse problema vá em:
 
-    Tools <kbd>&rarr;</kbd> Options <kbd>&rarr;</kbd> EDA Tool Options
+    Tools &#9658; Options &#9658; EDA Tool Options
 
 Apenas um local estará com link. E é o local errado!
 Recorte e cole o link no campo **ModelSim**.
