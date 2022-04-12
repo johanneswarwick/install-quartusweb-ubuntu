@@ -38,12 +38,13 @@ O processo de instalação deve ocorrer normalmente.
 
 ## Configurações Adicionais
 
-O Quartus II criou um projeto e compilou códigos em VHDL. Porém durante uso de simulações com o University Program VWF ocorreu um erro:
+Ao utilizar o Quartus II foi possível criar um projeto e compilar códigos em VHDL. Porém durante o uso de simulações com o University Program VWF ocorreu um erro:
 
     "ModelSim executable not found"
 
 Para resolver esse problema vá em:
 
-    Tools &rarr; Options &rarr; EDA Tool Options
+    Tools &#8594; Options &#8594; EDA Tool Options
 
-Apenas um local estará com link. E é o local errado. Recorte e cole o link no campo **ModelSim**.
+Apenas um local estará com link. E é o local errado!
+Recorte e cole o link no campo **ModelSim**.
