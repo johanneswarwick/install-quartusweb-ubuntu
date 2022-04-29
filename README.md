@@ -44,6 +44,14 @@ O processo de instalação deve ocorrer normalmente.
 $ <install_path>/quartus/bin/quartus --64bit
 ```
 
+Para simplificar o processo é possível adicionar o seguinte comando no **.bashrc**:
+
+```shell
+alias quartus='<install_path>/quartus/bin/quartus --64bit'
+```
+
+A partir deste ponto ao digitar **quartus** no terminal o programa será executado.
+
 ## Configurações Adicionais
 
 Ao utilizar o Quartus II foi possível criar um projeto e compilar códigos em VHDL. Porém durante o uso de simulações com o University Program VWF ocorreu um erro:
@@ -53,10 +61,9 @@ Ao utilizar o Quartus II foi possível criar um projeto e compilar códigos em V
 ```
 
 Para resolver esse problema vá em:
-
-```
-Tools :arrow_right: Options :arrow_right: EDA Tool Options
-```
+<pre>
+Tools &#8594; Options &#8594; EDA Tool Options
+</pre>
 
 Apenas um local estará com link. E é o local errado!
 Recorte e cole o link no campo **ModelSim**.
