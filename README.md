@@ -1,69 +1,79 @@
-# Instalação do Quartus em Linux
+# Installing Quartus on Ubuntu (Tested on 20.04 LTS)
 
-<!--- Texto --->
+<!--- This is a comment. --->
 
-## Download
+## Download Quartus Web 13.1
 
-Download [neste link](https://download.altera.com/akdlm/software/acdsinst/13.1/162/ib_tar/Quartus-web-13.1.0.162-linux.tar).
+Download [from this link](https://download.altera.com/akdlm/software/acdsinst/13.1/162/ib_tar/Quartus-web-13.1.0.162-linux.tar).
 
-## Download de Bibliotecas 32 Bits
+## Installing the 32-bit libraries
 
-<!--- Texto --->
+### Libraries to run the setup:
 
-### Bibliotecas para rodar o Setup:
-
-```console
-$ sudo dpkg --add-architecture i386
-$ sudo apt update
-$ sudo apt-get install libstdc++5:i386 libmotif4:i386 libxp6:i386 libcurl4:i386
+``` bash
+sudo dpkg --add-architecture i386
 ```
 
-### Biblioteca para rodar o Quartus II 13.1:
-
-```console
-$ sudo add-apt-repository ppa:linuxuprising/libpng12
-$ sudo apt update
-$ sudo apt install libpng12-0
+``` bash
+sudo apt update
 ```
 
-## Instalação do Quartus
-
-No local do download **extraia** os arquivos compactados em **.tar** e execute:
-
-```console
-$ ./setup.sh
+``` bash
+sudo apt-get install libstdc++5:i386 libmotif4:i386 libxp6:i386 libcurl4:i386
 ```
 
-O processo de instalação deve ocorrer normalmente.
+### Libraries to run the Quartus Web 13.1:
 
-## Rodando o Quartus
-
-<!--- Texto --->
-
-```console
-$ <install_path>/quartus/bin/quartus --64bit
+``` bash
+sudo add-apt-repository ppa:linuxuprising/libpng12
 ```
 
-Para simplificar o processo é possível adicionar o seguinte comando no **.bashrc**:
+``` bash
+sudo apt update
+```
 
-```shell
+``` bash
+sudo apt install libpng12-0
+```
+
+## Installing Quartus Web 13.1
+
+In download location **extract** the **.tar** files and open the setup with the following command:
+
+``` bash
+./setup.sh
+```
+
+The installation process should proceed normally.
+
+## Running Quartus Web 13.1
+
+Run Quartus with the following command:
+
+``` bash
+<install_path>/quartus/bin/quartus --64bit
+```
+
+To simplify, you can add the following alias to **.bashrc**:
+
+``` bash
 alias quartus='<install_path>/quartus/bin/quartus --64bit'
 ```
 
-A partir deste ponto ao digitar **quartus** no terminal o programa será executado.
+Now typing **quartus** in terminal will open the program.
 
-## Configurações Adicionais
+## Additional Settings
 
-Ao utilizar o Quartus II foi possível criar um projeto e compilar códigos em VHDL. Porém durante o uso de simulações com o University Program VWF ocorreu um erro:
+By using Quartus it was possible to create a project and compile codes in VHDL. However, during simulations with the University Program VWF, an error occurred:
 
-```diff
-- "ModelSim executable not found"
+``` diff
+- "ModelSim executable not found."
 ```
 
-Para resolver esse problema vá em:
+To solve this issue go to:
+
 <pre>
 Tools &#8594; Options &#8594; EDA Tool Options
 </pre>
 
-Apenas um local estará com link. E é o local errado!
-Recorte e cole o link no campo **ModelSim**.
+Only one field will have a link. And it's the wrong field! **Cut and paste the link into the ModelSim field**.
